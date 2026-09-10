@@ -91,7 +91,7 @@ const filmek = [
   }
 ];
 
-const table = document.getElementById('tartalom')
+const tbody = document.getElementById('tbody')
 for (const film of filmek){
     const tr = document.createElement('tr');
     const tdTitle = document.createElement('td');
@@ -101,12 +101,14 @@ for (const film of filmek){
     tdTitle.innerText = film.title
     tdYear.innerText = film.year
     tdGenre.innerText = film.genre
-    tdRating.innerText = "⭐"
+    tdRating.innerText =   "💩".repeat(film.rating)
+
+    
 
     tr.appendChild(tdTitle);
     tr.appendChild(tdYear);
     tr.appendChild(tdGenre);
     tr.appendChild(tdRating);
-    table.appendChild(tr);
+    tbody.appendChild(tr);
 
 }
